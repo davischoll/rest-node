@@ -1,11 +1,9 @@
 const express = require('express')
 const app = express()
+const routes = require('./routes')
 
-app.get('/costumers', (req, res) => {
-  res.send({
-    clientes: ['all costumers']
-  })
-})
+app.use(express.json())
+app.use(routes)
 
 app.listen(3000, (err) => {
   if (err)

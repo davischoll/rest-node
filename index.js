@@ -7,7 +7,7 @@ app.use(routes)
 
 app.listen(3000, (err) => {
   if (err)
-    console.log('Not possible to liste server...')
+    console.log('Unable to start server...')
   else
     console.log('Server running on port 3000')
 })

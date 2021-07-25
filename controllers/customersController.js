@@ -3,8 +3,7 @@ const customer = require('../models/customer')('../banco.sqlite3')
 const create = async (req, res) => {
   const newCustomer = await customer.create(req.body)
   res.send({
-    success: true,
-    newCustomer
+    success: true
   })
 }
 

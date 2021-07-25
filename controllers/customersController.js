@@ -1,41 +1,45 @@
-const create = (req, res) => {
+const customer = require('../models/customer')('../banco.sqlite3')
+
+const create = async (req, res) => {
+  const newCustomer = await customer.create(req.body)
   res.send({
     success: true,
-    data: req.body
+    newCustomer
   })
 }
 
-const findById = (req, res) => {
+const findById = async (req, res) => {
+  const customerFound = await customer.selectById(req.params.id)
   res.send({
-    name: 'Customer 1'
+    customerFound
   })
 }
 
-const findByName = (req, res) => {
+const findByName = async (req, res) => {
+  const customerFound = await customer.selectByName(req.params.name)
   res.send({
-    name: 'Customer found'
+    customerFound
   })
 }
 
-const remove = (req, res) => {
-  console.log(req.body)
+const remove = async (req, res) => {
+  const response = await customer.remove(req.params.id)
   res.send({
-    success: true,
-    data: 'id' + req.params.id
+    response
   })
 }
 
-const put = (req, res) => {
-  console.log(req.body)
+const patch = async (req, res) => {
+  const response = await customer.update(req.params.id, [req.body.name])
   res.send({
-    success: true,
-    data: req.body
+    data: response
   })
 }
 
-const findAll = (req, res) => {
+const findAll = async (req, res) => {
+  const customers = await customer.selectAll()
   res.send({
-    clientes: ['all custumers']
+    customers
   })
 }
 
@@ -44,6 +48,6 @@ module.exports = {
   findById,
   findByName,
   remove,
-  put,
+  patch,
   findAll
 }

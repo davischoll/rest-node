@@ -4,9 +4,9 @@ const findCities = async (req, res) => {
   let citiesSelected = ''
   const { name, uf } = req.query
 
-  if (name != '' && name != undefined)
+  if (name)
     citiesSelected = await cities.selectByName(name)
-  else if (uf != '' && uf != undefined)
+  else if (uf)
     citiesSelected = await cities.selectByUf(uf)
   else
     citiesSelected = await cities.selectAll()

@@ -5,7 +5,7 @@ const routes = require('./routes')
 app.use(express.json())
 app.use(routes)
 
-app.listen(3000, (err) => {
+app.listen(process.env.PORT || 3000, (err) => {
   if (err)
     console.log('Unable to start server...')
   else

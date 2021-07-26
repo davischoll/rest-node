@@ -49,7 +49,7 @@ A fim de realizar e testar as operações, pode-se utilizar, além do browser do
   ```
 - **GET**: `http://localhost:3000/cities`
   - Sem parâmetros: Retorna lista de todas as cidades cadastradas.
-  - Informando os campos `name` ou `uf` em Query Params, realizará uma busca pelo nome da cidade ou pelo seu estado, retornando todos os resultados encontrados.
+  - Informando os campos `name` ou `uf` via Query String, realizará uma busca pelo nome da cidade ou pelo seu estado, retornando todos os resultados encontrados.
 
 ### Clientes
 

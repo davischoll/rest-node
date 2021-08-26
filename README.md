@@ -1,7 +1,6 @@
 # Desafio | NodeJS Developer
 
-Projeto construído como desafio teste para processo de seleção da [Compasso UOL](https://compassouol.com/).
-Desenvolvimento de uma API REST em Java Script ([Node.js](https://nodejs.org/en/)), contemplando as operações básicas de um CRUD para cadastro de Clientes e Cidades.
+Projeto teste de desenvolvimento de uma API REST em Java Script ([Node.js](https://nodejs.org/en/)), contemplando as operações básicas de um CRUD para cadastro de Clientes e Cidades.
 
 ## Pré-requisitos
 

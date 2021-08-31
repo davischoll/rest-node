@@ -7,7 +7,7 @@ Projeto teste de desenvolvimento de uma API REST em Java Script ([Node.js](https
 Para rodar a aplicação em ambiente de desenvolvimento com um servidor local, será necessário apenas o NodeJS/NPM.
 
 ```
-$ git clone https://github.com/davischoll/rest-node-compasso.git
+$ git clone https://github.com/davischoll/rest-node.git
 $ npm install
 $ npm start
 ```
